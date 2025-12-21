@@ -9,6 +9,8 @@
   background-attachment: fixed;
   background-color: var(--bg-color);
   padding: 10px;
+  block-size: 100%;
+  height: 100vh;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -21,13 +23,13 @@
 }
 
 .header {
-  height: 100vh;
-  min-height: 668px;
+  block-size: 100%;
+  min-height: 600px;
   display: grid;
   align-items: baseline;
-  grid-template-rows: 1fr 1fr 1fr;
-  justify-content: center;
-  align-items: center;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-content: flex-start;
+  align-items: stretch;
   position: relative;
 }
 
@@ -56,9 +58,9 @@
 
 .header__theme-menu {
   grid-row: 1;
-  align-self: start;
+  display: flex;
+  align-self: center;
   justify-self: end;
-  margin-top: 60px;
 }
 
 .header__theme-menu-list{
@@ -67,7 +69,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 22px;
+  gap: 10px;
 }
 
 .header__theme-menu-item {
@@ -82,6 +84,8 @@
   color: var(--accent-color);
   text-transform: lowercase ;
   border: 1px solid transparent;
+  height: 26px;
+  width: 70px;
 }
 
 
@@ -93,15 +97,13 @@
   text-shadow: 4px 4px 0 var(--accent-color);
   grid-row: 2;
   line-height: 0.83;
-  align-self: start;
-  justify-self: start;
-  margin-top: 5px;
+  align-self: center;
+  justify-self: flex-start;
 }
 
 .header .title {
   grid-row: 3;
-  align-self: start;
-  margin-top: 30px;
+  align-self: center;
 }
 
 .title {
@@ -233,19 +235,17 @@
 
   .header__theme-menu {
     grid-column: 2;
-    margin-top: 169px;
-    margin-right: 8px;
+    margin-top: 110px;
   }
 
   .main_title {
     text-wrap: nowrap;
     margin-left: -20px;
-    margin-top: 103px;
   }
 
   .header .title {
     grid-column : 2;
-    margin-top: 21px;
+    margin-top: -100px;
   }
 
   .block {
@@ -341,7 +341,6 @@
     justify-self: center;
     align-self: start;
     margin-top: 0;
-    margin-right: 0;
   }
 
   .header__theme-menu-list {
@@ -350,11 +349,10 @@
 
   .main_title {
     font-size: 157px;
-    margin-top: 42px;
   }
 
   .header .title {
-  margin-top: 30px;
+    margin-top: -50px;
 }
 
   .block_concentrate {
