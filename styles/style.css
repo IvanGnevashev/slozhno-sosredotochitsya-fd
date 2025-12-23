@@ -37,7 +37,7 @@
   position: relative;
 }
 
-.decotation_ellement {
+.decoration_element {
   position: absolute;
   font-family: var(--font-family-title);
   font-weight: var(--font-weight-text);
@@ -47,7 +47,7 @@
   font-size: 18px;
 }
 
-.decotation_ellement::after {
+.decoration_element::after {
   content: '';
   position: absolute;
   right: -18px;
@@ -396,7 +396,7 @@ html.theme-auto {
   }
 }
 
-html.theme-auto .decotation_ellement {
+html.theme-auto .decoration_element {
   @media (prefers-color-scheme: light) {
     display: none;
   }
