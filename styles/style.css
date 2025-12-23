@@ -14,12 +14,16 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--text_color);
+  border-bottom: 1px solid var(--decor-color);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid color-mix(in srgb, var(--decor-color) 60%, transparent);
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  outline: 1px solid var(--text_color);
+  outline: 1px solid var(--decor-color);
 }
 
 .header {
@@ -81,7 +85,7 @@
   font-weight: var(--font-weight-text);
   background-color: transparent;
   font-size: var(--font-size);
-  color: var(--accent-color);
+  color: var(--decor-color);
   text-transform: lowercase ;
   border: 1px solid transparent;
   height: 26px;
@@ -148,15 +152,15 @@
 .corners::before {
   top: 0;
   right: 0;
-  border-top: 1px solid var(--accent-color); 
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--decor-color); 
+  border-right: 1px solid var(--decor-color);
 }
 
 .corners::after {
   bottom: 0px;
   left: 0;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--decor-color);
+  border-left: 1px solid var(--decor-color);
 }
 
 .block {
@@ -369,5 +373,35 @@
 
   .block_concentrate .module {
     grid-row: 2;
+  }
+}
+
+html.theme-auto {
+  @media (prefers-color-scheme: light) {
+  --text_color: #353430;
+  --accent-color: #FF8DCB;
+  --bg-color: #FFF1F7;
+  --main-title-color: #FFC2E6;
+  --background-image: url('/images/cover-image-light.png');
+  --decor-color: #353430;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+  --text_color: #F1B2CE;
+  --accent-color: #FF0070;
+  --bg-color: #000028;
+  --background-image: url('/images/cover-image-dark.png');
+  --main-title-color: #DB00FF;
+  --decor-color: #FF0070;
+  }
+}
+
+html.theme-auto .decotation_ellement {
+  @media (prefers-color-scheme: light) {
+    display: none;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    display: block;
   }
 }

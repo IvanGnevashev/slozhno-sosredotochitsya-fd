@@ -3,43 +3,28 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root {
+  --text_color: #353430;
+  --accent-color: #FF8DCB;
+  --bg-color: #FFF1F7;
+  --main-title-color: #FFC2E6;
+  --background-image: url('/images/cover-image-light.png');
+  --decor-color: #353430;
+}
 
 :root.theme-light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --text_color: #F1B2CE;
+  --text_color: #353430;
   --accent-color: #FF8DCB;
   --bg-color: #FFF1F7;
   --main-title-color: #FFC2E6;
   --background-image: url('/images/cover-image-light.png');
-  --light-text-color: #353430;
+  --decor-color: #353430;
 }
 
-.decotation_ellement {
+.theme-light .decotation_ellement {
   display: none;
-}
-
-.title {
-  color: var(--light-text-color);
-}
-
-.paragraph {
-  color: var(--light-text-color);
-}
-
-.corners::before {
-  top: 0;
-  right: 0;
-  border-top: 1px solid var(--light-text-color); 
-  border-right: 1px solid var(--light-text-color);
-}
-
-.corners::after {
-  bottom: 0px;
-  left: 0;
-  border-bottom: 1px solid var(--light-text-color);
-  border-left: 1px solid var(--light-text-color);
-
 }
