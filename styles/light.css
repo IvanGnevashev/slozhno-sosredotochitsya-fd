@@ -21,6 +21,10 @@
   display: none;
 }
 
+.theme-light .title {
+  color: var(--text-color);
+}
+
 @media (prefers-color-scheme: light) {
   :root.theme-auto {
     --text-color: #353430;
@@ -34,4 +38,8 @@
   .theme-auto .decoration_element {
     display: none;
   }
+
+  .theme-auto .title {
+  color: var(--text-color);
+}
 }

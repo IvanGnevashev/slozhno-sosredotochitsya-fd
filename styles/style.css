@@ -8,10 +8,12 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: var(--bg-color);
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   block-size: 100%;
-  height: 100vh;
   font-size: 18px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -28,13 +30,14 @@
 }
 
 .header {
-  block-size: 100%;
+  block-size: 100vh;
   min-height: 600px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   justify-content: flex-start;
   align-items: stretch;
   position: relative;
+  padding: 10px 0;
 }
 
 .decoration_element {
@@ -43,7 +46,7 @@
   font-weight: var(--font-weight-text);
   color: var(--accent-color);
   right: 28px;
-  top: 3px;
+  top: 10px;
   font-size: 18px;
 }
 
@@ -153,14 +156,14 @@
 }
 
 .corners::before {
-  top: 0;
+  top: 10px;
   right: 0;
   border-top: 1px solid var(--decor-color);
   border-right: 1px solid var(--decor-color);
 }
 
 .corners::after {
-  bottom: 0px;
+  bottom: 10px;
   left: 0;
   border-bottom: 1px solid var(--decor-color);
   border-left: 1px solid var(--decor-color);
@@ -173,11 +176,11 @@
 }
 
 .block:first-child {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .block:last-child {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .link_paragraph {
@@ -222,8 +225,8 @@
 
 .footer {
   display: flex;
-  height: 100%;
-  min-height: 648px;
+  height: 100vh;
+  min-height: 600px;
   align-items: center;
   justify-content: center;
 }
@@ -236,13 +239,25 @@
 
 @media (min-width: 768px) {
   .page {
-    padding: 20px;
+    padding: 0 20px;
   }
 
   .header {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr min-content 1fr;
+    padding: 20px 0;
+  }
+
+  .decoration_element {
+    top: 20px;
+  }
+
+  .corners::before {
+    top: 20px;
+  }
+
+  .corners::after {
+    bottom: 20px;
   }
 
   .header__theme-menu {
@@ -266,11 +281,11 @@
   }
 
   .block:first-child {
-    margin-top: 80px;
+    margin-top: 60px;
   }
 
   .block:last-child {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 
   .block_focus {
@@ -294,8 +309,8 @@
   }
 
   .block_concentrate h2 {
-    width: 236px;
     margin-bottom: 0;
+    width: 25%;
   }
 
   .block_concentrate .paragraph {
@@ -397,7 +412,6 @@
   .block_concentrate .title {
     grid-column: 1 / -1;
     grid-row: 1;
-    width: 315px;
   }
 
   .block_gold_fish {
@@ -408,6 +422,6 @@
   }
 
   .block:last-child {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
 }
