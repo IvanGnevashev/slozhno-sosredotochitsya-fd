@@ -120,12 +120,12 @@
   font-weight: var(--font-weight-title);
   font-size: var(--font-size);
   line-height: 23.4px;
-  color: var(--accent-color);
+  color: var(--decor-color);
   margin-bottom: 20px;
 }
 
 .title-decor {
-  color: var(--bg-color);
+  color: var(--title-accent-color);
   background-color: var(--accent-color);
   margin-bottom: 10px;
 }

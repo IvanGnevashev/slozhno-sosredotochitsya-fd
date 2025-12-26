@@ -15,6 +15,7 @@
   --background-image: url("../images/cover-image-dark.png");
   --main-title-color: #db00ff;
   --decor-color: #ff0070;
+  --title-accent-color: #000028;
 }
 
 .theme-dark .decoration_element {

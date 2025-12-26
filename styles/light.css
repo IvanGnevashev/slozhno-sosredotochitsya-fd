@@ -15,14 +15,11 @@
   --main-title-color: #ffc2e6;
   --background-image: url("../images/cover-image-light.png");
   --decor-color: #353430;
+  --title-accent-color: #353430;
 }
 
 .theme-light .decoration_element {
   display: none;
-}
-
-.theme-light .title {
-  color: var(--text-color);
 }
 
 @media (prefers-color-scheme: light) {
@@ -33,13 +30,10 @@
     --main-title-color: #ffc2e6;
     --background-image: url("../images/cover-image-light.png");
     --decor-color: #353430;
+    --title-accent-color: #353430;
   }
 
   .theme-auto .decoration_element {
     display: none;
   }
-
-  .theme-auto .title {
-  color: var(--text-color);
-}
 }
